@@ -1,7 +1,7 @@
 const { SchemaTypes, Schema } = require('mongoose');
 const connection = require('../connection');
-const Schema = connection.Schema;
-const teacherSchema = new Schema({
+const TeacherSchema = connection.Schema;
+const teacherSchema = new TeacherSchema({
     'Name': { 
         type: SchemaTypes.String, 
         required: true 

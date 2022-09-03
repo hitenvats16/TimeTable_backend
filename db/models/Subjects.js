@@ -1,7 +1,7 @@
 const { SchemaTypes, Schema } = require('mongoose');
 const connection = require('../connection');
-const Schema = connection.Schema;
-const subjectSchema = new Schema({
+const SubSchema = connection.Schema;
+const subjectSchema = new SubSchema({
     'Name': {
         type: SchemaTypes.String,
         required: true
