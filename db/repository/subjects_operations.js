@@ -4,5 +4,9 @@ module.exports = {
         const promise = SubjectModel.create(data);
         return promise;
     },
+    getAll(){
+        const promise = SubjectModel.find();
+        return promise;
+    }
 }
 
