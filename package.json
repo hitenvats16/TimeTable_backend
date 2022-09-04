@@ -11,5 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "mongoose": "^6.5.4"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.5.0"
   }
 }
