@@ -3,7 +3,7 @@ const app = express();
 
 const logic = require('./logic/TimeTableLogic')
 
-const PORT_NUMBER = 2000;
+const PORT_NUMBER = 5000;
 
 app.use(require('cors')());
 app.use(express.json());
