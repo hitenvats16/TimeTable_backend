@@ -6,10 +6,6 @@ const subjectSchema = new SubSchema({
         type: SchemaTypes.String,
         required: true
     },
-    'Teachers': {
-        type: Schema.Types.ObjectId,
-        ref: 'Teachers'
-    }
 });
 const SubjectModel = connection.model('Subjects', subjectSchema);
 module.exports = SubjectModel;

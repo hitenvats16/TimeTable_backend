@@ -1,5 +1,6 @@
 const TeacherModel = require('../models/Teachers')
 module.exports = {
+    TeachersArray: [],
     add(data) {
         const promise = TeacherModel.create(data);
         return promise;
@@ -10,8 +11,9 @@ module.exports = {
         });
         return promise;
     },
-    getAll(){
-        const promise = TeacherModel.find();
-        return promise;
+    async getAll(){
+        const data =await TeacherModel.find();
+        this.TeachersArray = [...data];
+        return this.TeachersArray;
     }
 }
