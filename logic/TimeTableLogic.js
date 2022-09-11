@@ -43,9 +43,9 @@ const operations = {
             let teacher = teachers[teacherIdx];
             while (!this.isNotPresent(slot, teacher, tt) && tt<this.noOfTT){
                 slot = (slot+1)%this.noOfSlots;
-                if(this.timeTable[tt][slot]) tt++;
+                if(this.timeTable[tt][slot] && tt<this.noOfTT) tt++;
             }
-            if (tt == this.noOfTT) return;
+            if(this.timeTable[tt][slot]) return;
             this.timeTable[tt][slot] = {
                 Teacher: teacher,
                 Subject:subject,
