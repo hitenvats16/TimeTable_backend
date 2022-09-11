@@ -41,11 +41,11 @@ const operations = {
         for (let tt = 0; tt < this.noOfTT; tt++) {
             let slot = this.slotsIndex[tt];
             let teacher = teachers[teacherIdx];
-            while (!this.isNotPresent(slot, teacher, tt) && tt<this.noOfTT){
+            while (!this.isNotPresent(slot, teacher, tt)){
                 slot = (slot+1)%this.noOfSlots;
-                if(this.timeTable[tt][slot] && tt<this.noOfTT) tt++;
+                if(this.timeTable[tt][slot]) return;
             }
-            if(this.timeTable[tt][slot]) return;
+            if (slot == this.noOfSlots) return;
             this.timeTable[tt][slot] = {
                 Teacher: teacher,
                 Subject:subject,
